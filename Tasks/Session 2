@@ -1,1 +1,48 @@
-Tasks 1
+Problem Statement: Shopping Cart Discount Calculation
+    You are building a simple shopping cart system where users can add items to their cart. Your task is to apply discounts based on the total amount of items in the cart.
+
+Requirements:
+    You have an array of products, where each product has a name and a price.
+    If the total cart value exceeds 500, apply a 10% discount.
+    If the total cart value is between 200 and 500, apply a 5% discount.
+    If the total cart value is below 200, no discount is applied.
+    Use loops and conditional statements to process the cart.
+    Display:
+    Each item’s name and price.
+    The total before discount.
+    The applied discount percentage.
+    The final total after discount.
+
+
+Example Input (PHP Array)
+
+$cart = [
+    ['name' => 'Laptop', 'price' => 300],
+    ['name' => 'Mouse', 'price' => 50],
+    ['name' => 'Keyboard', 'price' => 100],
+    ['name' => 'Headphones', 'price' => 80],
+];
+
+Expected Output
+
+Items in Cart:
+    - Laptop: $300
+    - Mouse: $50
+    - Keyboard: $100
+    - Headphones: $80
+
+Total Before Discount: $530
+Discount Applied: 10%
+Final Total: $477
+
+
+Guidelines for Solving:
+    Use a loop to iterate through the cart array.
+    Use if-else statements to check the total price and apply discounts.
+    Use arithmetic operations to calculate the final total.
+
+Extra Challenge:
+    Try modifying the problem to allow different discount rules for specific products, such as:
+
+    Electronics (Laptop, Headphones) → 15% discount
+    Accessories (Mouse, Keyboard) → 5% discount
