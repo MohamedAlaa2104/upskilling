@@ -1,0 +1,63 @@
+Task 1: Function Practice
+    Write a function multiply that accepts two numbers as parameters and returns their product.
+    Write a function divide that accepts two numbers and returns the result of division (handle division by zero)
+
+Task 2: Array Manipulation
+    Create an array of numbers [10, 20, 30, 40, 50].
+    Use array_map() to multiply each number by 2.
+    Use array_filter() to get numbers greater than 30.
+    Use array_reduce() to calculate the sum of the array.
+    Search for 30 in the array using array_search(), and replace it with 300.
+
+Task 3: Anonymous Functions & Callbacks
+    Create an anonymous function that takes a number and returns its square.
+    Use this function inside array_map() on an array [2, 4, 6, 8].
+    Create another anonymous function inside array_reduce() to find the product of all numbers in an array.
+
+
+Task 4: Using Static Variables
+    Write a function counter() that uses a static variable to count the number of times it has been called.
+    Call it multiple times and print the result.
+
+Task 5: Working with Dates & Time
+    Display the current timestamp using time().
+    Change the timezone to "America/New_York" and display the current time.
+    Calculate and display the date that is 10 days from now.
+    Convert "2024-05-10 12:00" into a timestamp using strtotime() and display it in "Y-m-d H:i:s" format.
+
+Task 6: Using Built-in Functions
+    $array1 = ["apple", "banana", "cherry"];
+    $array2 = [100, 200, 300];
+
+    Combine them using array_combine().
+    Merge two different arrays using array_merge().
+    Find the difference between two number arrays using array_diff().
+    Extract keys and values from an associative array using array_keys() and array_values().
+
+
+Task 7: Using Closures & Arrow Functions
+    Write an arrow function that takes a number and returns the number squared.
+    Use this function inside array_map() with an array [1, 2, 3, 4].
+    Create a function that takes a callback and an array, then applies the callback to each element.
+
+
+Task 8: Expense Tracker
+    You are developing a simple expense tracker for personal use. You need to create a PHP script that allows a user to store, calculate, and analyze expenses.
+
+    Requirements:
+    Users should be able to add expenses with:
+
+    A description (e.g., "Groceries", "Rent", "Electricity Bill").
+    An amount.
+    A date of the expense.
+    Perform the following operations:
+
+    Store expenses in an array.
+    Calculate the total amount spent using array_reduce().
+    Find all expenses greater than a specific amount using array_filter().
+    Sort expenses by amount (highest to lowest) using usort().
+    Find the most expensive and least expensive item using max() and min().
+    Format the expenses in a readable format using number_format() for currency.
+    Find expenses in a given date range using strtotime() and array_filter().
+
+
