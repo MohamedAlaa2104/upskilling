@@ -1,0 +1,19 @@
+//Read data as associative array
+
+    <tr>
+            <td> <?= $transaction['date']; ?> </td>
+            <td><?= $transaction['checkNumber']; ?></td>
+            <td><?= $transaction['description']; ?></td>
+            <td><?= $transaction['amount']; ?></td>
+    </tr>
+
+//Parse date from string 01/03/2023
+//Transform data format 01 ,Mar, 2023
+
+// Replace $ and , from amount string  -$1,303.97 => -1303.97
+// Convert string to float
+
+// Print sum total value
+// Print income as total income
+// Print expenses as total expenses
+// Use abs() function to get absolute value
