@@ -1,0 +1,28 @@
+Task: Library Management System
+Problem Statement:
+You are tasked with creating a Book class and a Library class to manage books in a library. The system should ensure that book details (e.g., title, author, ISBN) are encapsulated and cannot be directly accessed or modified from outside the class.
+
+Requirements:
+Encapsulation:
+
+Use private properties to store book details (title, author, ISBN, isAvailable).
+
+Provide public methods to interact with the book (e.g., borrow, return, check availability).
+
+Ensure that the book details cannot be directly modified from outside the class.
+
+Functionality:
+
+Allow a book to be borrowed (mark it as unavailable).
+
+Allow a book to be returned (mark it as available).
+
+Provide a method to check if a book is available.
+
+Add a method to display book details.
+
+Real-Life Constraints:
+
+The ISBN of a book should not be modifiable after the book is created.
+
+The availability status (isAvailable) should only be updated through the borrow() and return() methods.
