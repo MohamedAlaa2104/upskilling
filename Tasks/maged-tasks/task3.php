@@ -145,3 +145,4 @@ $numbers3 =[2,4,6,8,10];
 $squering =  callingback($squere ,$numbers3  );
 
 print_r($squering);
+print_r($squering);
