@@ -1,0 +1,66 @@
+Problem Statement
+You are tasked with building a simple online shopping system in PHP using Object-Oriented Programming (OOP) principles. The system should allow users to:
+
+    Browse products
+
+    Add products to a cart
+
+    Calculate the total price
+
+    Place an order
+
+Try to practice OOP principles
+    Classes and Objects
+
+    Encapsulation (private properties, getters/setters)
+
+    Inheritance (different types of products)
+
+    Polymorphism (method overriding)
+
+
+Step 1: Define the Product Class
+Requirements:
+Each product has:
+
+    name
+    price
+    description
+    Provide methods to:
+    Get product details (getDetails())
+    Update price (setPrice())
+
+Step 2: Extend Product for Different Types (Inheritance)
+   Requirements:
+   Create two subclasses:
+   DigitalProduct (e.g., eBooks, software) – has a downloadLink.
+   PhysicalProduct (e.g., books, gadgets) – has a weight (in kg).
+
+Step 3: Create a Shopping Cart (Composition)
+   Requirements:
+   The cart should:
+   Store an array of products.
+   Calculate the total price.
+   Allow adding/removing products.
+
+Step 4: Simulate an Order (Polymorphism)
+   Requirements:
+   Create an Order class that:
+   Takes a ShoppingCart and processes it.
+   Displays order summary.
+
+
+The end flow should be like:
+
+// Create products
+$ebook = new DigitalProduct("PHP for Beginners", 29.99, "Learn PHP OOP", "http://download.example.com/php-ebook");
+$laptop = new PhysicalProduct("Laptop", 999.99, "16GB RAM, 512GB SSD", 2.5);
+
+// Create a cart
+$cart = new ShoppingCart();
+$cart->addItem($ebook);
+$cart->addItem($laptop);
+
+// Place an order
+$order = new Order($cart);
+$order->checkout();
