@@ -1,0 +1,21 @@
+{
+    "name": "mohamed/upskilling",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "functions.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Mohamed Alaa",
+            "email": "mohamedalaa2104@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
