@@ -1,0 +1,12 @@
+Project structure
+
+ecommerce-app/
+├── app/
+│   └── ProductService.php
+├── vendor/
+├── composer.json
+└── public/index.php
+
+use ramsey/uuid package to generate uuid for products
+
+display a list of products with these properties: uuid, name, description, price, and a link with uuid to a product page that displays details about the product
