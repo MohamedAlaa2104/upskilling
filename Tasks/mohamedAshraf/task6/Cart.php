@@ -33,4 +33,9 @@ class Cart
         array_splice($this->products, $productIndex);
         var_dump($this->products);
     }
+
+    public function listProducts(): array
+    {
+        return $this->products;
+    }
 }

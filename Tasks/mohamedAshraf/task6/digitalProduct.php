@@ -6,4 +6,9 @@ class DigitalProduct extends Product
     {
         parent::__construct($name, $price, $description, $type);
     }
+
+    public function getDetails(): string
+    {
+        return parent::getDetails() . ", Download Link: $this->link";
+    }
 }
