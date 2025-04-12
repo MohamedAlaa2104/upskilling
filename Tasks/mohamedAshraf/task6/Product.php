@@ -12,9 +12,14 @@ class Product
     {
     }
 
-    public function getDetails()
+    public function getDetails(): string
     {
-        echo "The $this->name, price is: $this->price, and $this->description.";
+        return "Name: $this->name, Price: $$this->price, Description: $this->description";
+    }
+
+    public function getPrice(): float
+    {
+        return $this->price;
     }
 
     public function setPrice(float $newPrice)
@@ -22,6 +27,4 @@ class Product
         $this->price = $newPrice;
         echo "Product price Updated";
     }
-
-
 }
