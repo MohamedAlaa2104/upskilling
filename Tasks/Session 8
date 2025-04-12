@@ -36,5 +36,8 @@ The script includes error handling using try-catch blocks and uses PDO's excepti
    - The `table()` method should return an instance of a query builder or a similar object.
    - This object should have methods like `select()`, `insert()`, `update()`, `delete()`, `exec()`, etc.
    - The final execution should look similar to `DB::table('users')->select()->exec();` or `DB::table('orders')->insert([...])->exec();`
+   Note you should use composer and autoload to import DB class
 
+8. Read PSR-1 
+https://www.php-fig.org/psr/psr-1
 
