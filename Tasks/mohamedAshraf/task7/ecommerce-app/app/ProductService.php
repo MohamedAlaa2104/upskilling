@@ -1,7 +1,6 @@
 <?php
 
 namespace App;
-include_once("Product.php");
 
 class ProductService
 {

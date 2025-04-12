@@ -2,7 +2,7 @@
 
 namespace App;
 
-use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\Nonstandard\Uuid;
 
 class Product
 {
