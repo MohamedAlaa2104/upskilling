@@ -1,0 +1,40 @@
+1. Connect to MySQL server using PDO
+2. Create a new database named 'ecom' if it doesn't exist
+3. Create a users table with the following columns:
+   - id (auto-incrementing primary key)
+   - name (required)
+   - email (required, unique)
+   - phone
+   - password (required)
+   - address
+   - created_at (timestamp with default current time)
+
+4. Create an orders table with the following columns:
+   - id (auto-incrementing primary key)
+   - user_id (foreign key referencing users table)
+   - quantity
+   - total_price (decimal)
+   - created_at (timestamp with default current time)
+
+5. Insert 10 sample orders in a single bulk INSERT statement using the following format:
+   INSERT INTO orders (user_id, quantity, total_price) VALUES 
+   (1, 2, 100.00),
+   (2, 1, 50.00),
+   ...etc
+
+6. Write SELECT statements to:
+   - Get all orders for each user (using JOIN with users table)
+   - Sort orders by price in descending order
+   - Sort orders by price in ascending order
+   - Count total number of orders for each user (using GROUP BY and COUNT)
+
+The script includes error handling using try-catch blocks and uses PDO's exception mode for better error reporting. It also properly closes the database connection when done.
+
+7. Refactor the database connection:
+   - Create a separate `DB` class to handle the database connection and operations.
+   - Implement a static method `table()` in the `DB` class that accepts the table name.
+   - The `table()` method should return an instance of a query builder or a similar object.
+   - This object should have methods like `select()`, `insert()`, `update()`, `delete()`, `exec()`, etc.
+   - The final execution should look similar to `DB::table('users')->select()->exec();` or `DB::table('orders')->insert([...])->exec();`
+
+
