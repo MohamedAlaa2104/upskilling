@@ -1,0 +1,81 @@
+Task: Create Simple User Login and Registration System with Admin Approval
+🎯 Objective:
+Build a basic login and registration system using PHP (8.2), MySQL, and sessions. Only users who are approved by the admin can log in. The first user to register becomes the admin automatically.
+
+📌 Key Requirements:
+User Registration
+
+Create a form where users can register by entering a username and password.
+
+Save the user to a users table in the database.
+
+By default:
+
+New users should have is_active = false
+
+New users should have is_admin = false
+
+BUT: If this is the first user ever registered, make them:
+
+is_admin = true
+
+is_active = true
+
+User Login
+
+Create a login form for users to log in with their username and password.
+
+Only allow login if:
+
+Username/password is correct
+
+AND is_active = true
+
+If not active, show a message: "Your account is not yet approved by admin."
+
+Admin Panel
+
+If a user is an admin (checked using is_admin flag), show them a page where:
+
+They can see a list of all users.
+
+For each user, show a button like “Approve” or “Activate” if is_active = false.
+
+When clicked, it updates that user’s is_active to true.
+
+🧱 Database Table: users
+sql
+Copy
+Edit
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    is_admin BOOLEAN DEFAULT FALSE,
+    is_active BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+🔐 Login Flow Summary
+User registers → Added to database but not active.
+
+Admin logs in → Goes to admin page → Activates users.
+
+Active users can now log in successfully.
+
+🧰 Tech to Use
+PHP
+
+MySQL
+
+PDO for database access
+
+PHP sessions for login state
+
+🟢 Hints for the Developer
+Use password_hash() and password_verify() for password security.
+
+Use $_SESSION to keep track of the logged-in user.
+
+On registration, check if users table is empty → make that user admin + active.
+
+Create simple admin page like admin.php to manage users.
