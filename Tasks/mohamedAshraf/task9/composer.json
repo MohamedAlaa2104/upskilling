@@ -1,0 +1,15 @@
+{
+    "name": "mohamed-ashraf/task9",
+    "autoload": {
+        "psr-4": {
+            "MohamedAshraf\\Task9\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mohamedashrafibraheem.com",
+            "email": "mohamedashrafibraheem@gmail.com"
+        }
+    ],
+    "require": {}
+}
