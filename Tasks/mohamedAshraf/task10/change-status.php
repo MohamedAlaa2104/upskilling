@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $currentStatus = (int) trim($_POST['current_status']);
 
     Db::CreateTable("users")->update([
-        "is_active" => $currentStatus
+        "is_active" => !$currentStatus
     ], $userId)->execute();
 
 
