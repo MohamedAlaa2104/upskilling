@@ -1,0 +1,128 @@
+Task: SQL Practice with Large Product Dataset
+Objective:
+
+To gain practical experience with SQL by creating a large dataset (one million records) using PHP and then running various query types to understand their syntax, usage, and performance implications on a significant amount of data.
+
+Prerequisites:
+
+Basic understanding of SQL (CREATE TABLE, INSERT, SELECT, UPDATE, DELETE, WHERE, ORDER BY, LIMIT, aggregate functions).
+
+Basic understanding of PHP, including database connections (PDO or MySQLi).
+
+Access to a database server (like MySQL/MariaDB or PostgreSQL).
+
+PHP environment set up to run scripts.
+
+Steps:
+
+Define and Create the products Table:
+
+Design a schema for a products table. Include columns that allow for diverse querying practice. Suggested columns:
+
+id (INT, Primary Key, Auto Increment)
+
+name (VARCHAR, e.g., 255 characters)
+
+description (TEXT, optional)
+
+price (DECIMAL, e.g., 10,2)
+
+stock (INT)
+
+category (VARCHAR, e.g., 100)
+
+created_at (TIMESTAMP or DATETIME, default to current timestamp)
+
+Write the CREATE TABLE SQL statement for this schema.
+
+Execute this statement (either via a SQL client or a simple PHP script) to create the table in your database.
+
+Generate and Insert One Million Products using PHP:
+
+Create a PHP script (generate_products.php).
+
+Database Connection: Include your database connection logic (like in db.php from your session) using PDO or MySQLi.
+
+Data Generation Loop: Write a loop that iterates 1,000,000 times.
+
+Fake Data: Inside the loop, generate somewhat realistic fake data for each product:
+
+name: e.g., "Product " + loop counter, or use random words.
+
+description: A short random sentence or leave NULL sometimes.
+
+price: Random decimal between, say, 10.00 and 2000.00.
+
+stock: Random integer between 0 and 1000.
+
+category: Randomly select from a predefined list of categories (e.g., 'Electronics', 'Clothing', 'Home Goods', 'Books', 'Toys').
+
+created_at: Generate random dates within a specific range (e.g., the last two years) or use the current timestamp.
+
+Insertion:
+
+Use prepared statements to insert the data safely and efficiently.
+
+Efficiency Tip: Consider inserting data in batches (e.g., inserting 100 or 1000 rows per INSERT statement) instead of one row at a time. This significantly speeds up the process. Research how to perform batch inserts with PDO/MySQLi.
+
+Run the Script: Execute php generate_products.php from your command line. Be patient, as inserting one million records will take some time! Monitor for any PHP errors or timeouts (you might need to increase max_execution_time in your php.ini temporarily if the script times out).
+
+Practice SQL Queries:
+
+Create another PHP script (query_practice.php) or use a SQL client connected to your database.
+
+Write and execute various SQL queries against your populated products table. Analyze the results and, if possible, the time taken for each query. Here are some examples based on your session (adapt them to your schema):
+
+Select products from a specific category with price below a certain value, ORDER BY created_at.
+
+Select products WHERE description IS NULL.
+
+Select products WHERE NOT category = 'Toys'.
+
+UPDATE the name of products with stock = 0 to 'Out of Stock - [Original Name]'.
+
+DELETE products added before a certain date with low stock.
+
+Select the 10 most expensive products (ORDER BY price DESC LIMIT 10).
+
+Select products using pagination (LIMIT and OFFSET), e.g., show products 51-60 when ordered by name.
+
+Select products with name LIKE '%Gadget%'.
+
+Select products WHERE id IN (a list of specific IDs).
+
+Select products WHERE stock BETWEEN 10 AND 50.
+
+Select products WHERE created_at BETWEEN two specific dates.
+
+Use aliases for table and column names (AS).
+
+Calculate MIN(price), MAX(price), AVG(price), COUNT(*), SUM(stock) for all products.
+
+Calculate SUM(price) only for products in the 'Electronics' category.
+
+Select products whose price is greater than the AVG(price) of all products (using a subquery).
+
+Bonus Challenges:
+
+Indexing: Add appropriate indexes (e.g., on category, price, created_at) to the products table and observe how it affects the performance of your SELECT queries (especially those with WHERE or ORDER BY clauses). Use EXPLAIN (or EXPLAIN ANALYZE) before and after adding indexes to see the difference in the query plan.
+
+Related Tables: Create a separate categories table (id, name) and modify the products table to have a category_id (Foreign Key). Populate the categories table and update the products.category_id. Practice JOIN queries between products and categories.
+
+Deliverables:
+
+The SQL CREATE TABLE statement for your products table.
+
+The generate_products.php script used to populate the table.
+
+A file (queries.sql or query_practice.php) containing the various SQL queries you wrote and executed in Step 3.
+
+(Optional) A brief analysis of any performance differences observed, especially if you implemented the indexing bonus challenge.
+
+Notes:
+
+Generating and inserting one million rows can be resource-intensive. Ensure you have sufficient disk space and monitor your database server's performance.
+
+PHP script execution time limits might need adjustment.
+
+Focus on understanding why each query works and what kind of results it produces. Pay attention to how different clauses (WHERE, ORDER BY, LIMIT, etc.) interact.
