@@ -11,4 +11,13 @@
 // 8. SELECT * from products WHERE category LIKE "%s";
 // 9. SELECT * from products WHERE id IN (1000, 1500);
 // 10. SELECT * from products WHERE stock BETWEEN 10 AND 15;
-// 11.
+// 11. SELECT * from products WHERE created_at BETWEEN "2023-05-03" AND "2025-05-03";
+// 12. SELECT name as "product name", p.description from products as p WHERE p.created_at BETWEEN "2023-05-03" AND "2025-05-03";
+// 13. 
+// a. SELECT MIN(price) FROM products;
+// b. SELECT MAX(price) FROM products;
+// c. SELECT AVG(price) FROM products;
+// d. SELECT COUNT(price) FROM products;
+// e. SELECT SUM(stock) FROM products;
+// 14. SELECT SUM(price) FROM products WHERE category LIKE "TVs";
+// 15. SELECT * FROM products WHERE price >=(SELECT AVG(price) from products);
